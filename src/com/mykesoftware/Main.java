@@ -4,14 +4,16 @@ import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        String result = NumberFormat.getPercentInstance().format(0.4);
+        System.out.printf("Name: ");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine().trim();
+        System.out.println("You are " + name);
 
-
-        System.out.println(result);
 
 
     }
