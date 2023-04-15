@@ -1,13 +1,17 @@
 package com.mykesoftware;
 
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
-        final float PI = 3.14F;
 
+        String result = NumberFormat.getPercentInstance().format(0.4);
+
+
+        System.out.println(result);
 
 
     }
