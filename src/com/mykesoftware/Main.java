@@ -6,9 +6,8 @@ import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
+        final float PI = 3.14F;
 
-        int[][] numbers ={{1,2,3},{4,5,6}};
-        System.out.println(Arrays.deepToString(numbers));
 
 
     }
