@@ -8,14 +8,36 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        final byte MONTHS_IN_YEAR = 12;
+        final byte PERCENT = 100;
 
-        System.out.printf("Name: ");
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine().trim();
-        System.out.println("You are " + name);
+
+        System.out.print("Principal: ");
+        int principal = scanner.nextInt();
+
+        System.out.print("Interest rate: ");
+        float interest = scanner.nextFloat();
+        float monthlyInterest = (interest / MONTHS_IN_YEAR) / PERCENT;
+
+
+        System.out.print("Period (Years): ");
+        byte period = scanner.nextByte();
+        int numberOfPayments = period * MONTHS_IN_YEAR;
+
+        float mortgage = (float) (principal * ((monthlyInterest * Math.pow((1+monthlyInterest),numberOfPayments)) / (Math.pow((1+ monthlyInterest),numberOfPayments)-1)));
+
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String total = currency.format(mortgage);
+
+        System.out.println("Mortgage: " + total);
+
+
 
 
 
     }
+
+
 
 }
