@@ -25,7 +25,7 @@ public class Main {
         byte period = scanner.nextByte();
         int numberOfPayments = period * MONTHS_IN_YEAR;
 
-        float mortgage = (float) (principal * ((monthlyInterest * Math.pow((1+monthlyInterest),numberOfPayments)) / (Math.pow((1+ monthlyInterest),numberOfPayments)-1)));
+        double mortgage = principal * ((monthlyInterest * Math.pow((1+monthlyInterest),numberOfPayments)) / (Math.pow((1+ monthlyInterest),numberOfPayments)-1));
 
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         String total = currency.format(mortgage);
