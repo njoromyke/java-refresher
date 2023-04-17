@@ -8,15 +8,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int temperature = 22;
-        boolean isWarm = temperature > 20 && temperature < 30;
-        boolean hasHighIncome= true;
-        boolean hasGoodCredit = true;
-        boolean hasCriminalRecord = true;
-        boolean isEligible = (hasHighIncome || hasGoodCredit) && !hasCriminalRecord;
+        int temperature = 12;
+        if(temperature > 30) {
+            System.out.println("It is a hot day");
+            System.out.println("'Drink water'");
+        }
+        else if (temperature > 20)
+            System.out.println("Beautiful day");
+         else
+            System.out.println("Cold day!");
 
 
-        System.out.println(isEligible);
 
 
     }
