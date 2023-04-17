@@ -8,18 +8,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       String role = "Moderator";
-       switch (role){
-           case "Admin":
-               System.out.println("You are an admin");
-               break;
+        for(int i= 1; i <= 5; i++){
+            System.out.println("Hello world" + i);
+        }
 
-           case "Moderator":
-               System.out.println("You are a moderator");
-               break;
-
-           default:
-               System.out.println("You are a guest");
-       }
     }
 }
