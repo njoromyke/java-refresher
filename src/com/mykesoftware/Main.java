@@ -17,5 +17,11 @@ public class Main {
          input = scanner.next().toLowerCase();
          System.out.println(input);
      }
+     do {
+         System.out.println("Input: ");
+         input = scanner.next().toLowerCase();
+         System.out.println(input);
+
+     }while (!input.equals("quit"));
     }
 }
