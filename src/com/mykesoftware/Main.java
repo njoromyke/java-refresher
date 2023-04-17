@@ -8,8 +8,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       int income = 120_0000;
-       String className = (income > 100_000) ? "First" : "Economy";
+       String role = "Moderator";
+       switch (role){
+           case "Admin":
+               System.out.println("You are an admin");
+               break;
 
+           case "Moderator":
+               System.out.println("You are a moderator");
+               break;
+
+           default:
+               System.out.println("You are a guest");
+       }
     }
 }
