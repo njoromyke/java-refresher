@@ -6,7 +6,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        final byte MONTHS_IN_YEAR = 12;
+       String message =  greetUser("Mike","Njoroge");
+        System.out.println(message);
+
+    }
+    public  static  String greetUser(String firstName, String lastName){
+        return firstName + " " + lastName;
+    }
+}
+/*
+ final byte MONTHS_IN_YEAR = 12;
         final byte PERCENT = 100;
 
         int principal;
@@ -54,5 +63,4 @@ public class Main {
 
         String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
         System.out.println("Mortgage: " + mortgageFormatted);
-    }
-}
+ */
