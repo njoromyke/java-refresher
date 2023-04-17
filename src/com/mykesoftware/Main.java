@@ -6,10 +6,21 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        var textbox1 = new TextBox();
-        var textbox2 = textbox1;
-        textbox2.setText("Hello world");
-        System.out.println(textbox1.text);
+        int baseSalary =50_000;
+        int extrHours = 10;
+        int hourlyRate =20;
+        int wage = calculateWage(baseSalary,extrHours,hourlyRate);
+        System.out.println(wage);
+
+    }
+
+    public  static int calculateWage(
+            int baseSalry,
+            int extraHours,
+            int hourlyRate
+
+    ){
+        return  baseSalry + (extraHours * hourlyRate);
     }
 
 
