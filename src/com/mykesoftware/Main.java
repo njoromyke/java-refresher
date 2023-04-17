@@ -7,13 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
         var textbox1 = new TextBox();
-        textbox1.setText("Box 1");
-
-        System.out.println(textbox1.text.toUpperCase());
-
-        var textBox2 = new TextBox();
-        textBox2.setText("New Text Box");
-        System.out.println(textBox2.text);
+        var textbox2 = textbox1;
+        textbox2.setText("Hello world");
+        System.out.println(textbox1.text);
     }
 
 
