@@ -6,22 +6,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int baseSalary =50_000;
-        int extrHours = 10;
-        int hourlyRate =20;
-        int wage = calculateWage(baseSalary,extrHours,hourlyRate);
+        var employee = new Employee();
+        employee.baseSalary = 50_000;
+        employee.hourlyRate = 10;
+        int wage = employee.calculateWage(10);
+
         System.out.println(wage);
 
     }
-
-    public  static int calculateWage(
-            int baseSalry,
-            int extraHours,
-            int hourlyRate
-
-    ){
-        return  baseSalry + (extraHours * hourlyRate);
-    }
-
-
 }
