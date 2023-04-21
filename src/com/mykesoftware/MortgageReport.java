@@ -3,8 +3,14 @@ package com.mykesoftware;
 import java.text.NumberFormat;
 
 public class MortgageReport {
+
+    private static MortgageCalculator calculator;
+
     public static void printMortgage(int principal, float annualInterest, byte years) {
-        double mortgage = Main.calculateMortgage(principal, annualInterest, years);
+
+        calculator = new MortgageCalculator(principal,annualInterest,years);
+
+        double mortgage = calculator.calculateMortgage();
         String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
         System.out.println();
         System.out.println("MORTGAGE");
@@ -17,7 +23,7 @@ public class MortgageReport {
         System.out.println("PAYMENT SCHEDULE");
         System.out.println("----------------");
         for (short month = 1; month <= years * Main.MONTHS_IN_YEAR; month++) {
-            double balance = Main.calculateBalance(principal, annualInterest, years, month);
+            double balance = MortgageCalculator.calculateBalance(month);
             System.out.println(NumberFormat.getCurrencyInstance().format(balance));
         }
     }
