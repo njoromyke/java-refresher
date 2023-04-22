@@ -33,4 +33,8 @@ public class MortgageCalculator {
 
         return mortgage;
     }
+
+    public short getYears() {
+        return years;
+    }
 }
