@@ -1,6 +1,6 @@
 package com.mykesoftware;
 
-public class UIControl {
+public abstract class UIControl {
     private  boolean isEnabled = true;
 
     public  void enable (){
@@ -10,9 +10,7 @@ public class UIControl {
 //    public UIControl(boolean isEnabled) {
 //        this.isEnabled = isEnabled;
 //    }
-    public void  render(){
-
-    }
+    public abstract void  render();
     public  void  disable(){
         isEnabled= false;
     }
