@@ -9,7 +9,6 @@ public class UIControl {
 
     public UIControl(boolean isEnabled) {
         this.isEnabled = isEnabled;
-        System.out.println("UI Control");
     }
 
     public  void  disable(){
