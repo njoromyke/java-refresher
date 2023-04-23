@@ -1,6 +1,6 @@
 package com.mykesoftware;
 
-public class TextBox extends UIControl {
+public final class TextBox extends UIControl {
     private String text = "";
 
     @Override
